@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mod Library</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" id="searchBar" placeholder="Search mods...">
+            <select id="sortOptions">
+                <option value="popularity">Sort by Popularity</option>
+                <option value="name">Sort by Name</option>
+                <option value="date">Sort by Date</option>
+            </select>
+            <button id="addModButton">Add Mod</button>
+        </section>
+        <section id="modList">
+            <!-- Mods will be dynamically populated here -->
+        </section>
+    </main>
+    <script src="mods.js"></script>
+</body>
+</html>
