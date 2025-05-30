@@ -4,12 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOOMFORGE Mod Manager</title>
+    <!-- DOOM-like font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    /* Hell/Doom themed UI */
+body {
+    background: linear-gradient(135deg, #2a0909 0%, #6e1a1a 100%);
+    color: #ffb380;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a0505;
+    padding: 1rem 2rem;
+    border-bottom: 4px solid #ff3c00;
+    box-shadow: 0 2px 10px #000a;
+}
+
+.logo-small {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 8px #ff3c00);
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #ff3c00;
+    text-shadow: 2px 2px 8px #000, 0 0 10px #ff3c00;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+section {
+    background: rgba(30, 10, 10, 0.95);
+    border: 2px solid #ff3c00;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff3c0033;
+    padding: 2rem;
+    min-width: 350px;
+    max-width: 400px;
+}
+
+h2 {
+    color: #ff3c00;
+    margin-top: 0;
+    text-shadow: 1px 1px 6px #000;
+}
+
+.hell-btn {
+    background: linear-gradient(90deg, #ff3c00 0%, #b20000 100%);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff3c00, 0 2px 8px #000a;
+    transition: background 0.2s, transform 0.1s;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.hell-btn:hover {
+    background: linear-gradient(90deg, #b20000 0%, #ff3c00 100%);
+    transform: scale(1.05);
+}
+
+.hell-input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 2px solid #ff3c00;
+    background: #2a0909;
+    color: #ffb380;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 6px #ff3c0033;
+}
+
+#profile-list, #mod-list {
+    margin-top: 1rem;
+    min-height: 60px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1a0505;
+    color: #ffb380;
+    border-top: 2px solid #ff3c00;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 0 -2px 10px #000a;
+}
+</style>
 <body>
     <header>
-        <img src="assets/logo.svg" alt="GZDoom Mod Manager Logo">
         <h1>DOOMFORGE Mod Manager</h1>
+        <img src="assets/logo.svg" alt="GZDoom Mod Manager Logo" class="logo-small">
     </header>
     <main>
         <section id="profile-manager">
@@ -17,11 +124,11 @@
             <div id="profile-list">
                 <!-- Profiles will be listed here -->
             </div>
-            <button id="create-profile">Create Profile</button>
+            <button id="create-profile" class="hell-btn">Create Profile</button>
         </section>
         <section id="mod-library">
             <h2>Mod Library</h2>
-            <input type="text" id="search-mods" placeholder="Search mods...">
+            <input type="text" id="search-mods" placeholder="Search mods..." class="hell-input">
             <div id="mod-list">
                 <!-- Mods will be listed here -->
             </div>
