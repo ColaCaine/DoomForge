@@ -1,4 +1,4 @@
-# GZDoom Mod Manager Web App
+# DoomForge
 
 This project is a web application designed to manage GZDoom mods using a user-friendly interface. It allows users to create profiles, manage mod installations, and provides a library of popular mods.
 
